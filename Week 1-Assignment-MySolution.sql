@@ -16,6 +16,10 @@ LIMIT 1;
 -- The aircraft with 2 engine with the most seats is N206UA.
 -- The aircraft with 3 engine with the most seats are N854NW.
 -- The aircraft with 4 engine with the most seats is N670US.
+SELECT DISTINCT engines
+FROM planes
+ORDER BY engines;
+
 (SELECT tailnum, engines, seats FROM planes WHERE engines ='1' ORDER BY seats DESC LIMIT 1)
 UNION
 (SELECT tailnum, engines, seats FROM planes WHERE engines ='2' ORDER BY seats DESC LIMIT 1)
